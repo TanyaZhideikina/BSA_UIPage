@@ -1,0 +1,314 @@
+body{
+    background-color: rgb(210, 166, 121);
+	margin:0;
+}
+
+@font-face {
+  font-family: Ubuntu;
+  src: url(../ref/fonts/Ubuntu/Ubuntu-Medium.ttf);
+}
+
+@font-face {
+  font-family: Loto;
+  src: url(../ref/fonts/Lato/Lato-Regular.ttf);
+}
+
+header{
+    background-color: rgb(204, 153, 102);
+    padding: 2%;
+}
+
+header div{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+header img{
+    max-width: 5%;
+    max-height: auto;
+    display: inline-block;
+}
+
+header h1{
+    display: inline-block;
+    position: absolute;
+    margin: 1% auto;
+    color: rgb(77, 51, 25);
+    font-family: Ubuntu;
+}
+
+header input[name="searchLine"]{
+    color: rgb(77, 51, 25);
+    border: 1px solid rgb(57, 38, 19);
+    padding: 5px 2px 5px 30px;
+    background-image: url(../ref/lupa.png);
+    background-color: rgb(236, 217, 198);
+    background-size: 10% 95%;
+    background-repeat: no-repeat;
+    display: inline-block;
+    position: absolute;
+    margin: 2% 2% auto;
+    right: 0;
+}
+
+nav{
+    text-align: center;
+    background-color: rgb(96, 64, 31);
+}
+
+nav a{
+    margin: 1% auto;
+    padding: 1% 7% 1% 7%;
+    display: inline-block;
+    border: 1px solid rgb(77, 51, 25);
+    background-color: rgb(199, 140, 82);
+    border-radius: 3%;
+    color: rgb(58, 38, 19);
+    font-family: Ubuntu;
+    font-size: 18px;
+}
+
+main{
+    background-color: rgb(224, 190, 159);
+    display: block;
+    padding: 2%;
+    width: auto;
+    height: auto;
+    position: relative;
+    margin-right: 25%;
+}
+
+aside{
+    max-width: 25%;
+    float: right;
+    background-color: rgb(210, 166, 121);
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    float: right;
+}
+
+.imageRow1{
+    margin:3%;
+    max-width: 40%;
+
+}
+
+.imageRow1:hover{
+   animation: move 10s linear infinite;
+}
+
+.imageRow2:hover{
+   animation: move2 10s linear infinite;
+}
+
+@keyframes move{
+     0%{
+         width: 40%;
+    }
+    50%{
+         width: 20%;
+    }
+    100%{
+         width: 40%;
+    }
+}
+
+@keyframes move2{
+     0%{
+         width: 60%;
+    }
+    50%{
+         width: 40%;
+    }
+    100%{
+         width: 60%;
+    }
+}
+
+.imageRow2{
+    margin:3%;
+    max-width: 60%;
+}
+
+aside p{
+    padding: 3%;
+    color: rgb(58, 38, 19);
+    font-family: Ubuntu;
+    font-size: 18px;
+    margin: 1.5%;
+}
+
+article p{
+    color: rgb(58, 38, 19);
+    font-family: Loto;
+    font-size: 18px;
+}
+
+#first {
+    margin: 1% auto 5% auto;
+}
+
+#second{
+    margin: 5% auto 1% auto;
+}
+
+#first img{
+    max-width: 15%;
+    float: left;
+    padding: 2%;
+	transition: width 2s, height 2s, transform 2s;
+}
+
+#second img{
+    float: right;
+    padding: 2%;
+	  transition: width 2s, height 2s, transform 2s;
+}
+
+#first img:hover{
+	transform: rotate(360deg);
+}
+
+#second img:hover{
+	transform: rotate(-360deg);
+}
+
+footer{
+    background-color: rgb(96, 64, 31);
+    position: relative;
+    font-family: Ubuntu;
+}
+
+footer p{
+    display:inline;
+    color: rgb(224, 190, 159);
+    text-align: right;
+    right: 0;
+}
+
+footer div{
+    display: inline-block;
+}
+
+input[name="subscribeLine"]{
+    color: rgb(77, 51, 25);
+    border: 1px solid rgb(57, 38, 19);
+    padding: 3px 4px 3px 4px;
+    background-color: rgb(236, 217, 198);
+}
+
+input[name="subscribeButton"]{
+    color:rgb(236, 217, 198);
+    border: 1px solid black;
+    padding: 3px 4px 3px 4px;
+    background-color: rgb(57, 38, 19);
+    text-align: center;
+    font-family: Ubuntu;
+}
+
+#footerLine1{
+    margin: auto auto auto 5%;
+    padding: 3%;
+}
+
+#footerLine2{
+    margin: auto auto auto 25%;
+    padding: 3%;
+}
+
+@media screen and (max-width:1200px){
+  header div{
+        width: 50%;
+        float: left;
+        text-align: left;
+    }
+    header{
+        height:50px;
+    }
+    header img{
+      margin-top:2%;
+   }
+    nav>a:first-child{
+        display: none;
+    }
+     #footerLine2{
+      margin: 0px;
+    }
+     #footerLine1{
+     margin: 0 0 0 10%;
+    }
+    #first img{
+        max-width: 150px;
+    }
+}
+
+@media screen and (max-width:850px){
+    aside{
+        display: none;
+    }
+    main{
+        width: 95.5%;
+    }
+    header h1{
+       margin-top: 2%;
+    }
+     header img{
+      display: none;
+    }
+     nav a {
+        min-width:30%;
+    }
+     #footerLine2, #footerLine1{
+      margin: 0% auto;
+    }
+}
+
+@media screen and (max-width:600px){
+    header h1{
+        margin: 2% auto 2% auto;
+        font-size: 1.5em;
+    }
+
+   nav a {
+        min-width:80%;
+    }
+
+      #footerLine2, #footerLine1{
+      margin: 0px;
+    }
+
+    header input{
+        width: 30%;
+    }
+}
+
+@media screen and (max-width:360px){
+     header h1{
+        margin-top: 3%;
+        font-size: 1.3em;
+    }
+
+     header div{
+        width: 50%;
+    }
+
+    header input{
+        width: 30%;
+    }
+
+    @media screen and (max-width:230px){
+     header h1{
+        margin-top: 3%;
+        font-size: 1em;
+    }
+
+     header div{
+        width: 50%;
+    }
+
+    header input{
+        width: 30%;
+    }
+}
